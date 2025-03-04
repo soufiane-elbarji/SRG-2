@@ -41,7 +41,9 @@ section {
 .highlight {
   color: var(--teal);
 }
-
+a {
+  text-decoration: none;
+}
 .year {
   color: var(--yellow);
 }

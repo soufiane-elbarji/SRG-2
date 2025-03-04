@@ -78,7 +78,7 @@ const App = () => {
       <header className="header">
         <div className="container header-container">
           <div className="logo">
-            <h1><span className="highlight">SRG 2</span><span className="year">025</span></h1>
+            <h1><a href='https://srg-2.vercel.app/'><span className="highlight">SRG 2</span><span className="year">025</span></a></h1>
           </div>
           <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
             <ul>
