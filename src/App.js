@@ -11,6 +11,17 @@ ReactGA.initialize("G-B4T7ETSJT5");
 
 ReactGA.send({ hitType: "pageview", page: "/my-path", title: "Custom Title" });
 
+useEffect(() => {
+  ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+}, []);
+
+const handleButtonClick = () => {
+  ReactGA.event({
+    category: 'User',
+    action: 'Clicked a button'
+  });
+};
+
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('day1'); // State to manage active tab
