@@ -98,7 +98,7 @@ const App = () => {
       <section id="home" className="hero">
         <div className="container hero-container">
           <div className="hero-content">
-            <h1 className="title">South Robotics Gathering</h1>
+            <h1 className="title">South <span className='robotics'>Robotics</span> Gathering</h1>
             <h3 className="subtitle">2nd edition</h3>
             <p className="date">April 11-12, 2025</p>
             <div className="buttons">

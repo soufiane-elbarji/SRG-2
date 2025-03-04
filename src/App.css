@@ -215,6 +215,9 @@ section {
   margin-bottom: 10px;
   line-height: 1.2;
 }
+.robotics{
+  color : var(--yellow);
+}
 
 .subtitle {
   font-size: 24px;
