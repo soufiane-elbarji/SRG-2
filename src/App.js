@@ -5,7 +5,11 @@ import InstagramIcon from './assets/icons/InstagramIcon';
 import LinkedInIcon from './assets/icons/LinkedInIcon';
 import AboutImageGallery from './AboutImageGallery';
 import { Analytics } from '@vercel/analytics/react';
+import ReactGA from "react-ga4";
 
+ReactGA.initialize("G-B4T7ETSJT5");
+
+ReactGA.send({ hitType: "pageview", page: "/my-path", title: "Custom Title" });
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
