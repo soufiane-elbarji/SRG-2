@@ -239,7 +239,7 @@ const App = () => {
                     <div className="content">
                       <h3>Lunch Break</h3>
                       <p>Networking opportunity with refreshments</p>
-                      <div className="venue">Workshop Rooms A, B, C</div>
+                      <div className="venue">Espace Amphi</div>
                     </div>
                   </div>
                   
