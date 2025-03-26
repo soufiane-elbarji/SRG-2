@@ -250,7 +250,7 @@ const App = () => {
                               <div className="speaker-details">
                                 <h4>{speakers.day1[0].name}</h4>
                                 <p>{speakers.day1[0].role} at {speakers.day1[0].company}</p>
-                                <p className="conference-theme">{speakers.day1[0].title}</p>
+                                <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[0].title}</p>
                               </div>
                             </div>
                             <div className="conference-description">
@@ -290,7 +290,7 @@ const App = () => {
                               <div className="speaker-details">
                                 <h4>{speakers.day1[1].name}</h4>
                                 <p>{speakers.day1[1].role} at {speakers.day1[1].company}</p>
-                                <p className="conference-theme">{speakers.day1[1].title}</p>
+                                <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[1].title}</p>
                               </div>
                             </div>
                             <div className="conference-description">
