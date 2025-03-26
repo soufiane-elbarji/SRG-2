@@ -7,25 +7,25 @@ const AboutImageGallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "/Ensa.jpg",
+      src: "/Media/Ensa.jpg",
       alt: "Ensa Agadir",
       caption: "ENSA Agadir"
     },
     {
       id: 2,
-      src: "/Exhibit.jpg",
+      src: "/Media/Exhibit.jpg",
       alt: "Innovation Showcase",
       caption: "Innovative projects display"
     },
     {
       id: 3,
-      src: "/Sumo.jpg",
+      src: "/Media/Sumo.jpg",
       alt: "Competition",
       caption: "Sumo Robot Competition"
     },
     {
       id: 4,
-      src: "/Awards.jpg",
+      src: "/Media/Awards.jpg",
       alt: "Award Ceremony",
       caption: "Award Ceremony"
     }

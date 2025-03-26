@@ -509,8 +509,8 @@ a {
 }
 
 .speaker-photo {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 15px;
@@ -518,6 +518,7 @@ a {
 }
 
 .speaker-details h4 {
+  font-size: large;
   color: var(--teal);
   margin-bottom: 5px;
 }
