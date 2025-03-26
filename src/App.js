@@ -69,6 +69,39 @@ const App = () => {
       alert('An error occurred. Please try again.');
     }
   };
+/////////////////////////////////////////////////
+  const speakers = {
+    day1: [
+      {
+        id: 'conference1',
+        name: 'Speaker Name 1',
+        role: 'Position at Company',
+        company: 'Company Name',
+        photo: '/speaker-placeholder.jpg', // Replace with actual image path
+        title: 'Conference Title 1',
+        description: 'Detailed description of what the conference will cover...'
+      },
+      {
+        id: 'conference2',
+        name: 'Speaker Name 2',
+        role: 'Position at Company',
+        company: 'Company Name',
+        photo: '/speaker-placeholder.jpg',
+        title: 'Conference Title 2',
+        description: 'Detailed description of what the conference will cover...'
+      }
+    ],
+  };
+  /////////////////////////////////////////////////////////////////////
+
+
+  // Add this state to your component (with the other useState hooks)
+  const [expandedConference, setExpandedConference] = useState(null);
+  
+  // Add this function to handle conference clicks
+  const toggleConference = (conferenceId) => {
+    setExpandedConference(expandedConference === conferenceId ? null : conferenceId);
+  };
 
   return (
     <div className="app">
@@ -201,8 +234,30 @@ const App = () => {
                   <div className="timeline-item">
                     <div className="time">9:30 AM - 10:30 AM</div>
                     <div className="content">
-                      <h3>Conference</h3>
-                      <p>--</p>
+                      <h3 
+                          className="conference-title" 
+                          onClick={() => toggleConference('conference1')}
+                        >
+                          Conference
+                          <span className={`dropdown-icon ${expandedConference === 'conference1' ? 'expanded' : ''}`}>
+                            ▼
+                          </span>
+                        </h3>
+                        {expandedConference === 'conference1' && (
+                          <div className="speaker-info">
+                            <div className="speaker-header">
+                              <img src={speakers.day1[0].photo} alt={speakers.day1[0].name} className="speaker-photo" />
+                              <div className="speaker-details">
+                                <h4>{speakers.day1[0].name}</h4>
+                                <p>{speakers.day1[0].role} at {speakers.day1[0].company}</p>
+                                <p className="conference-theme">{speakers.day1[0].title}</p>
+                              </div>
+                            </div>
+                            <div className="conference-description">
+                              <p>{speakers.day1[0].description}</p>
+                            </div>
+                          </div>
+                        )}
                       <div className="venue">Amphi Théâtre</div>
                     </div>
                   </div>
@@ -219,8 +274,30 @@ const App = () => {
                   <div className="timeline-item">
                     <div className="time">11:00 PM - 12:30 PM</div>
                     <div className="content">
-                      <h3>Conference</h3>
-                      <p>--</p>
+                    <h3 
+                          className="conference-title" 
+                          onClick={() => toggleConference('conference2')}
+                        >
+                          Conference
+                          <span className={`dropdown-icon ${expandedConference === 'conference2' ? 'expanded' : ''}`}>
+                            ▼
+                          </span>
+                        </h3>
+                        {expandedConference === 'conference2' && (
+                          <div className="speaker-info">
+                            <div className="speaker-header">
+                              <img src={speakers.day1[1].photo} alt={speakers.day1[1].name} className="speaker-photo" />
+                              <div className="speaker-details">
+                                <h4>{speakers.day1[1].name}</h4>
+                                <p>{speakers.day1[1].role} at {speakers.day1[1].company}</p>
+                                <p className="conference-theme">{speakers.day1[1].title}</p>
+                              </div>
+                            </div>
+                            <div className="conference-description">
+                              <p>{speakers.day1[1].description}</p>
+                            </div>
+                          </div>
+                        )}
                       <div className="venue">Amphi Théâtre</div>
                     </div>
                   </div>
