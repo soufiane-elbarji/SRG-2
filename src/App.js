@@ -145,7 +145,7 @@ const App = () => {
             <h3>Our Sponsors</h3>
             <div className="sponsors-grid">
               <div className="sponsor-item">
-                <img src="/api/placeholder/150/80" alt="Sponsor 1" />
+                <img src="./assets/sponso-logos/sud_concession_Auto - LOGO.png" alt="Sponsor 1" />
               </div>
               <div className="sponsor-item">
                 <img src="/api/placeholder/150/80" alt="Sponsor 2" />
