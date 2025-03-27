@@ -4,6 +4,8 @@ import FacebookIcon from './assets/icons/FacebookIcon';
 import InstagramIcon from './assets/icons/InstagramIcon';
 import LinkedInIcon from './assets/icons/LinkedInIcon';
 import AboutImageGallery from './AboutImageGallery';
+import ProgressBar from './ProgressBar';
+import ScrollToTopButton from './ScrollToTopButton';
 import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
@@ -124,6 +126,8 @@ const App = () => {
             <div className={`burger ${isMenuOpen ? 'active' : ''}`}></div>
           </div>
         </div>
+        <ProgressBar />
+        <ScrollToTopButton />
       </header>
 
       {/* Home Section */}
@@ -181,7 +185,7 @@ const App = () => {
               <img src="\sponso-logos\sud_concession_Auto-LOGO.png" alt="Sponsor 1" />
               </div>
               <div className="sponsor-item">
-                <img src="/api/placeholder/150/80" alt="Sponsor 2" />
+                <img src="\sponso-logos\Petrostar-LOGO.png" alt="Sponsor 2" />
               </div>
               <div className="sponsor-item">
                 <img src="/api/placeholder/150/80" alt="Sponsor 3" />
