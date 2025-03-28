@@ -604,7 +604,7 @@ a {
 
 .social-link:hover {
   background-color: var(--yellow);
-  color: var(--black);
+  color: var(--teal);
 }
 
 .form-group {
