@@ -75,7 +75,7 @@ const App = () => {
     day1: [
       {
         id: 'conference1',
-        name: 'Dr. youness Ahallal',
+        name: 'Dr. youness AHALLAL',
         role: 'Urologist',
         company: 'Groupe Hospitalier Diaconesses Croix Saint-Simon',
         photo: '/Media/dr-youness_ahallal.jpg',
@@ -91,7 +91,7 @@ const App = () => {
       },
       {
         id: 'conference3',
-        name: 'Omar',
+        name: 'Omar JNIOIH',
         role: 'Founder',
         company: 'J&T Roboticx',
         photo: '/Media/omar.jpg',
@@ -342,7 +342,7 @@ const App = () => {
                         <img src={speakers.day1[2].photo} alt={speakers.day1[2].name} className="speaker-photo" />
                         <div className="speaker-details">
                           <h4>{speakers.day1[2].name}</h4>
-                          <p>{speakers.day1[2].role} at {speakers.day1[2].company}</p>
+                          <p>{speakers.day1[2].role} of {speakers.day1[2].company}</p>
                           <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[0].title}</p>
                         </div>
                       </div>
