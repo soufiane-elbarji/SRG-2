@@ -212,7 +212,7 @@ const App = () => {
           </div>
           
           <div className="sponsors">
-            <h3>Our Sponsors</h3>
+            <h3>Our Sponsors And Partners</h3>
             <div className="sponsors-grid">
               <div className="sponsor-item">
               <img src="\sponso-logos\sud_concession_Auto-LOGO.png" alt="Sponsor 1" />
@@ -221,10 +221,10 @@ const App = () => {
                 <img src="\sponso-logos\Petrostar-LOGO.png" alt="Sponsor 2" />
               </div>
               <div className="sponsor-item">
-                <img src="/api/placeholder/150/80" alt="Sponsor 3" />
+                <img src="\sponso-logos\J&T Roboticx.png" alt="Sponsor 3" />
               </div>
               <div className="sponsor-item">
-                <img src="/api/placeholder/150/80" alt="Sponsor 4" />
+                <img src="\sponso-logos\Speed Impression.png" alt="Sponsor 4" />
               </div>
             </div>
           </div>
