@@ -346,9 +346,7 @@ const App = () => {
                           <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[2].title}</p>
                         </div>
                       </div>
-                      <div className="conference-description">
-                        <p>{speakers.day1[2].description}</p>
-                      </div>
+                      
                     </div>
                     <div className="venue">Amphi Théâtre</div>
                   </div>
@@ -367,9 +365,7 @@ const App = () => {
                           <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[1].title}</p>
                         </div>
                       </div>
-                      <div className="conference-description">
-                        <p>{speakers.day1[3].description}</p>
-                      </div>
+                      
                     </div>
                     <div className="venue">Amphi Théâtre</div>
                   </div>
