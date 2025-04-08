@@ -167,7 +167,9 @@ const App = () => {
       <section id="home" className="hero">
         <div className="container hero-container">
           <div className="hero-content">
-            <h1 className="title">South <span className='robotics'>Robotics</span> Gathering</h1>
+            <h1 className="title">South</h1>
+            <h1 className="title"><span className='robotics'>Robotics</span></h1>
+            <h1 className="title">Gathering</h1>
             <h3 className="subtitle">2nd edition</h3>
             <p className="date">April 11-12, 2025</p>
             <div className="buttons">
@@ -212,7 +214,7 @@ const App = () => {
           </div>
           
           <div className="sponsors">
-            <h3>Our Sponsors And Partners</h3>
+            <h2 className="section-title">Sponsors <span className="highlight">& Partners</span></h2>
             <div className="sponsors-grid">
               <div className="sponsor-item">
               <img src="\sponso-logos\sud_concession_Auto-LOGO.png" alt="Sponsor 1" />
@@ -221,7 +223,7 @@ const App = () => {
                 <img src="\sponso-logos\Petrostar-LOGO.png" alt="Sponsor 2" />
               </div>
               <div className="sponsor-item">
-                <img src="\sponso-logos\J&T Roboticx.png" alt="Sponsor 3" />
+                <img src="\sponso-logos\J&T Robotix.png" alt="Sponsor 3" />
               </div>
               <div className="sponsor-item">
                 <img src="\sponso-logos\Speed Impression.png" alt="Sponsor 4" />
@@ -271,7 +273,7 @@ const App = () => {
                   <div className="timeline-item">
                   <div className="time">9:30 AM - 10:15 AM</div>
                   <div className="content">
-                    <h3 className="conference-title">Conference</h3>
+                    <h3 className="conference-title">Conference 1</h3>
                     <div className="speaker-info">
                       <div className="speaker-header">
                         <img src={speakers.day1[0].photo} alt={speakers.day1[0].name} className="speaker-photo" />
@@ -289,7 +291,7 @@ const App = () => {
                 <div className="timeline-item">
                   <div className="time">10:15 AM - 11:00 AM</div>
                   <div className="content">
-                    <h3 className="conference-title">Conference</h3>
+                    <h3 className="conference-title">Conference 2</h3>
                     <div className="speaker-info">
                       <div className="speaker-header">
                         <img src={speakers.day1[1].photo} alt={speakers.day1[1].name} className="speaker-photo" />
@@ -334,7 +336,7 @@ const App = () => {
                   <div className="timeline-item">
                   <div className="time">3:00 PM - 3:45 PM</div>
                   <div className="content">
-                    <h3 className="conference-title">Conference</h3>
+                    <h3 className="conference-title">Conference 3</h3>
                     <div className="speaker-info">
                       <div className="speaker-header">
                         <img src={speakers.day1[2].photo} alt={speakers.day1[2].name} className="speaker-photo" />
@@ -355,7 +357,7 @@ const App = () => {
                 <div className="timeline-item">
                   <div className="time">3:45 PM - 4:30 PM</div>
                   <div className="content">
-                    <h3 className="conference-title">Conference</h3>
+                    <h3 className="conference-title">Conference 4</h3>
                     <div className="speaker-info">
                       <div className="speaker-header">
                         <img src={speakers.day1[3].photo} alt={speakers.day1[3].name} className="speaker-photo" />

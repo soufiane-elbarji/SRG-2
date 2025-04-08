@@ -212,11 +212,11 @@ a {
 }
 
 .title {
-  font-size: 90px;
+  font-size: 100px;
   font-weight: 800;
   font-family: 'Horta', sans-serif;
-  margin-bottom: 10px;
-  line-height: 1.2;
+  margin-bottom: 2px;
+  line-height: 1;
 }
 .robotics{
   color : var(--yellow);
@@ -372,6 +372,7 @@ a {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+  margin-top: 60px;
 }
 
 .sponsor-item {
