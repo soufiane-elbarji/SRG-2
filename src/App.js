@@ -361,7 +361,7 @@ const App = () => {
                         <img src={speakers.day1[3].photo} alt={speakers.day1[3].name} className="speaker-photo" />
                         <div className="speaker-details">
                           <h4>{speakers.day1[3].name}</h4>
-                          <p>{speakers.day1[3].role} at {speakers.day1[1].company}</p>
+                          <p>{speakers.day1[3].role} of {speakers.day1[1].company}</p>
                           <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[1].title}</p>
                         </div>
                       </div>
