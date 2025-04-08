@@ -79,31 +79,61 @@ const App = () => {
         role: 'Urologist',
         company: 'Groupe Hospitalier Diaconesses Croix Saint-Simon',
         photo: '/Media/dr-youness_ahallal.jpg',
-        title: 'Surgery Without Borders: The Era of Medical Robotics',
+        title: 'Surgery Without Borders: The Era of Medical Robotics.',
       },
       {
         id: 'conference2',
         name: 'Speaker Name 2',
-        role: 'Position at Company',
-        company: 'Company Name',
-        photo: '/speaker-placeholder.jpg',
-        title: 'Smart Farming: The Future of Agriculture through Robotics',
+        role: 'Founder',
+        company: 'J&T Roboticx',
+        photo: '',
+        title: 'Smart Farming: The Future of Agriculture through Robotics.',
       },
       {
         id: 'conference3',
-        name: 'Speaker Name 2',
-        role: 'Position at Company',
-        company: 'Company Name',
-        photo: '/speaker-placeholder.jpg',
-        title: 'Smart Farming: The Future of Agriculture through Robotics',
+        name: 'Omar',
+        role: 'Founder',
+        company: 'J&T Roboticx',
+        photo: '/Media/omar.jpg',
+        title: 'The robot humanoid world in Morocco.',
       },
       {
         id: 'conference4',
         name: 'Speaker Name 2',
-        role: 'Position at Company',
-        company: 'Company Name',
+        role: 'Position',
+        company: 'Company',
+        photo: '',
+        title: 'Robotics in Moroccan Industry: Challenges, Opportunities and Future.',
+      }
+    ],
+    debate: [
+      {
+        id: 'debater1',
+        name: 'Debater Name 1',
+        role: 'Position',
+        company: 'Company',
+        photo: '',
+      },
+      {
+        id: 'debater2',
+        name: 'Debater Name 2',
+        role: 'Position',
+        company: 'Company',
         photo: '/speaker-placeholder.jpg',
-        title: 'Smart Farming: The Future of Agriculture through Robotics',
+      },
+      {
+        id: 'debater3',
+        name: 'Debater Name 3',
+        role: 'Position',
+        company: 'Company',
+        photo: '/speaker-placeholder.jpg',
+      },
+      {
+        id: 'debater4',
+        name: 'Debater Name 4',
+        role: 'Position',
+        company: 'Company',
+        photo: '/speaker-placeholder.jpg',
       }
     ],
   };
@@ -251,9 +281,6 @@ const App = () => {
                           <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[0].title}</p>
                         </div>
                       </div>
-                      <div className="conference-description">
-                        <p>{speakers.day1[0].description}</p>
-                      </div>
                     </div>
                     <div className="venue">Amphi Théâtre</div>
                   </div>
@@ -271,9 +298,6 @@ const App = () => {
                           <p>{speakers.day1[1].role} at {speakers.day1[1].company}</p>
                           <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[1].title}</p>
                         </div>
-                      </div>
-                      <div className="conference-description">
-                        <p>{speakers.day1[1].description}</p>
                       </div>
                     </div>
                     <div className="venue">Amphi Théâtre</div>
@@ -362,7 +386,19 @@ const App = () => {
                     <div className="time">5:00 PM - 6:30 PM</div>
                     <div className="content">
                       <h3>Debate Session</h3>
-                      <p>--</p>
+                      {/* <p>Panel discussion on current topics in robotics</p> */}
+                      <div className="debate-participants">
+                        {speakers.debate.map(debater => (
+                          <div key={debater.id} className="debate-participant">
+                            <img src={debater.photo} alt={debater.name} className="debate-photo" />
+                            <div className="debate-details">
+                              <h4>{debater.name}</h4>
+                              <p>{debater.role}</p>
+                              <p>{debater.company}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                       <div className="venue">Amphi Théâtre</div>
                     </div>
                   </div>
