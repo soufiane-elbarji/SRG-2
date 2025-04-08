@@ -343,7 +343,7 @@ const App = () => {
                         <div className="speaker-details">
                           <h4>{speakers.day1[2].name}</h4>
                           <p>{speakers.day1[2].role} of {speakers.day1[2].company}</p>
-                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[0].title}</p>
+                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[2].title}</p>
                         </div>
                       </div>
                       <div className="conference-description">
