@@ -71,17 +71,15 @@ const App = () => {
       alert('An error occurred. Please try again.');
     }
   };
-/////////////////////////////////////////////////
   const speakers = {
     day1: [
       {
         id: 'conference1',
-        name: 'Speaker Name 1',
-        role: 'Position at Company',
-        company: 'Company Name',
-        photo: '/speaker-placeholder.jpg', // Replace with actual image path
-        title: 'Conference Title 1',
-        description: 'Detailed description of what the conference will cover...'
+        name: 'Dr. youness Ahallal',
+        role: 'Urologist',
+        company: 'Groupe Hospitalier Diaconesses Croix Saint-Simon',
+        photo: '/Media/dr-youness_ahallal.jpg',
+        title: 'Surgery Without Borders: The Era of Medical Robotics',
       },
       {
         id: 'conference2',
@@ -89,20 +87,25 @@ const App = () => {
         role: 'Position at Company',
         company: 'Company Name',
         photo: '/speaker-placeholder.jpg',
-        title: 'Conference Title 2',
-        description: 'Detailed description of what the conference will cover...'
+        title: 'Smart Farming: The Future of Agriculture through Robotics',
+      },
+      {
+        id: 'conference3',
+        name: 'Speaker Name 2',
+        role: 'Position at Company',
+        company: 'Company Name',
+        photo: '/speaker-placeholder.jpg',
+        title: 'Smart Farming: The Future of Agriculture through Robotics',
+      },
+      {
+        id: 'conference4',
+        name: 'Speaker Name 2',
+        role: 'Position at Company',
+        company: 'Company Name',
+        photo: '/speaker-placeholder.jpg',
+        title: 'Smart Farming: The Future of Agriculture through Robotics',
       }
     ],
-  };
-  /////////////////////////////////////////////////////////////////////
-
-
-  // Add this state to your component (with the other useState hooks)
-  const [expandedConference, setExpandedConference] = useState(null);
-  
-  // Add this function to handle conference clicks
-  const toggleConference = (conferenceId) => {
-    setExpandedConference(expandedConference === conferenceId ? null : conferenceId);
   };
 
   return (
@@ -236,78 +239,58 @@ const App = () => {
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">9:30 AM - 10:30 AM</div>
-                    <div className="content">
-                      <h3 
-                          className="conference-title" 
-                          onClick={() => toggleConference('conference1')}
-                        >
-                          Conference
-                          <span className={`dropdown-icon ${expandedConference === 'conference1' ? 'expanded' : ''}`}>
-                            ▼
-                          </span>
-                        </h3>
-                        {expandedConference === 'conference1' && (
-                          <div className="speaker-info">
-                            <div className="speaker-header">
-                              <img src={speakers.day1[0].photo} alt={speakers.day1[0].name} className="speaker-photo" />
-                              <div className="speaker-details">
-                                <h4>{speakers.day1[0].name}</h4>
-                                <p>{speakers.day1[0].role} at {speakers.day1[0].company}</p>
-                                <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[0].title}</p>
-                              </div>
-                            </div>
-                            <div className="conference-description">
-                              <p>{speakers.day1[0].description}</p>
-                            </div>
-                          </div>
-                        )}
-                      <div className="venue">Amphi Théâtre</div>
+                  <div className="time">9:30 AM - 10:15 AM</div>
+                  <div className="content">
+                    <h3 className="conference-title">Conference</h3>
+                    <div className="speaker-info">
+                      <div className="speaker-header">
+                        <img src={speakers.day1[0].photo} alt={speakers.day1[0].name} className="speaker-photo" />
+                        <div className="speaker-details">
+                          <h4>{speakers.day1[0].name}</h4>
+                          <p>{speakers.day1[0].role} at {speakers.day1[0].company}</p>
+                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[0].title}</p>
+                        </div>
+                      </div>
+                      <div className="conference-description">
+                        <p>{speakers.day1[0].description}</p>
+                      </div>
                     </div>
+                    <div className="venue">Amphi Théâtre</div>
                   </div>
+                </div>
+
+                <div className="timeline-item">
+                  <div className="time">10:15 AM - 11:00 AM</div>
+                  <div className="content">
+                    <h3 className="conference-title">Conference</h3>
+                    <div className="speaker-info">
+                      <div className="speaker-header">
+                        <img src={speakers.day1[1].photo} alt={speakers.day1[1].name} className="speaker-photo" />
+                        <div className="speaker-details">
+                          <h4>{speakers.day1[1].name}</h4>
+                          <p>{speakers.day1[1].role} at {speakers.day1[1].company}</p>
+                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[1].title}</p>
+                        </div>
+                      </div>
+                      <div className="conference-description">
+                        <p>{speakers.day1[1].description}</p>
+                      </div>
+                    </div>
+                    <div className="venue">Amphi Théâtre</div>
+                  </div>
+                </div>
                   
                   <div className="timeline-item">
-                    <div className="time">10:30 AM - 11:00 PM</div>
+                    <div className="time">11:00 AM - 11:30 AM</div>
                     <div className="content">
                       <h3>Coffee Break</h3>
                       <p>Networking opportunity with refreshments</p>
                       <div className="venue">Espace Amphi</div>
                     </div>
                   </div>
-                  
+                                    
                   <div className="timeline-item">
-                    <div className="time">11:00 PM - 12:30 PM</div>
-                    <div className="content">
-                    <h3 
-                          className="conference-title" 
-                          onClick={() => toggleConference('conference2')}
-                        >
-                          Conference
-                          <span className={`dropdown-icon ${expandedConference === 'conference2' ? 'expanded' : ''}`}>
-                            ▼
-                          </span>
-                        </h3>
-                        {expandedConference === 'conference2' && (
-                          <div className="speaker-info">
-                            <div className="speaker-header">
-                              <img src={speakers.day1[1].photo} alt={speakers.day1[1].name} className="speaker-photo" />
-                              <div className="speaker-details">
-                                <h4>{speakers.day1[1].name}</h4>
-                                <p>{speakers.day1[1].role} at {speakers.day1[1].company}</p>
-                                <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[1].title}</p>
-                              </div>
-                            </div>
-                            <div className="conference-description">
-                              <p>{speakers.day1[1].description}</p>
-                            </div>
-                          </div>
-                        )}
-                      <div className="venue">Amphi Théâtre</div>
-                    </div>
-                  </div>
-                  
-                  <div className="timeline-item">
-                    <div className="time">12:30 PM - 1:00 PM</div>
+                    <div className="time">11:30 AM</div>
                     <div className="content">
                       <h3>Exhibition Booths Opening</h3>
                       <p>--</p>
@@ -316,7 +299,7 @@ const App = () => {
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">1:00 PM - 2:30 PM</div>
+                    <div className="time">12:30 PM - 3:00 PM</div>
                     <div className="content">
                       <h3>Lunch Break</h3>
                       <p>Networking opportunity with refreshments</p>
@@ -325,7 +308,58 @@ const App = () => {
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">3:00 PM - 4:00 PM</div>
+                  <div className="time">3:00 PM - 3:45 PM</div>
+                  <div className="content">
+                    <h3 className="conference-title">Conference</h3>
+                    <div className="speaker-info">
+                      <div className="speaker-header">
+                        <img src={speakers.day1[2].photo} alt={speakers.day1[2].name} className="speaker-photo" />
+                        <div className="speaker-details">
+                          <h4>{speakers.day1[2].name}</h4>
+                          <p>{speakers.day1[2].role} at {speakers.day1[2].company}</p>
+                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[0].title}</p>
+                        </div>
+                      </div>
+                      <div className="conference-description">
+                        <p>{speakers.day1[2].description}</p>
+                      </div>
+                    </div>
+                    <div className="venue">Amphi Théâtre</div>
+                  </div>
+                </div>
+
+                <div className="timeline-item">
+                  <div className="time">3:45 PM - 4:30 PM</div>
+                  <div className="content">
+                    <h3 className="conference-title">Conference</h3>
+                    <div className="speaker-info">
+                      <div className="speaker-header">
+                        <img src={speakers.day1[3].photo} alt={speakers.day1[3].name} className="speaker-photo" />
+                        <div className="speaker-details">
+                          <h4>{speakers.day1[3].name}</h4>
+                          <p>{speakers.day1[3].role} at {speakers.day1[1].company}</p>
+                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[1].title}</p>
+                        </div>
+                      </div>
+                      <div className="conference-description">
+                        <p>{speakers.day1[3].description}</p>
+                      </div>
+                    </div>
+                    <div className="venue">Amphi Théâtre</div>
+                  </div>
+                </div>
+
+                <div className="timeline-item">
+                    <div className="time">4:30 PM - 5:00 PM</div>
+                    <div className="content">
+                      <h3>Coffee Break</h3>
+                      <p>Networking opportunity with refreshments</p>
+                      <div className="venue">Espace Amphi</div>
+                    </div>
+                  </div>
+
+                  <div className="timeline-item">
+                    <div className="time">5:00 PM - 6:30 PM</div>
                     <div className="content">
                       <h3>Debate Session</h3>
                       <p>--</p>
@@ -333,40 +367,31 @@ const App = () => {
                     </div>
                   </div>
                   
-                  <div className="timeline-item">
-                    <div className="time">4:00 PM - 4:30 PM</div>
-                    <div className="content">
-                      <h3>Coffee Break</h3>
-                      <p>Networking opportunity with refreshments</p>
-                      <div className="venue">Espace Amphi</div>
-                    </div>
-                  </div>
-
-                  <div className="timeline-item">
-                    <div className="time">4:00 PM - 4:30 PM</div>
-                    <div className="content">
-                      <h3>Exhibition Booths</h3>
-                      <p>(Sponsors & Participants)</p>
-                      <div className="venue">Médiathèque</div>
-                    </div>
-                  </div>
                 </div>
               </div>
 
               {/* Day 2 Schedule */}
               <div className={`tab-pane ${activeTab === 'day2' ? 'active' : ''}`}>
                 <div className="timeline">
-                  <div className="timeline-item">
-                    <div className="time">9:00 AM - 10:30 AM</div>
+                <div className="timeline-item">
+                    <div className="time">8:30 AM</div>
                     <div className="content">
-                      <h3>TrilBot (Phase 1)</h3>
-                      <p>First phase of the TrilBot competition</p>
-                      <div className="venue">Amphi Théâtre</div>
+                      <h3>Reception</h3>
+                      <p>--</p>
+                      <div className="venue">Amphi II</div>
+                    </div>
+                  </div>
+                  <div className="timeline-item">
+                    <div className="time">9:00 AM - 10:15 AM</div>
+                    <div className="content">
+                      <h3>WarBot (Phase 1)</h3>
+                      <p>Phase éliminatoire et demi finale</p>
+                      <div className="venue">Amphi II</div>
                     </div>
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">10:30 AM - 11:00 AM</div>
+                    <div className="time">10:15AM - 10:45 AM</div>
                     <div className="content">
                       <h3>Coffee Break</h3>
                       <p>Networking opportunity with refreshments</p>
@@ -375,11 +400,11 @@ const App = () => {
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">11:00 AM - 1:00 PM</div>
+                    <div className="time">10:45 AM - 1:00 PM</div>
                     <div className="content">
                       <h3>FREE ROBOTICS</h3>
                       <p>Open robotics demonstrations and exhibitions</p>
-                      <div className="venue">Amphi Théâtre</div>
+                      <div className="venue">Amphi II</div>
                     </div>
                   </div>
                   
@@ -397,7 +422,7 @@ const App = () => {
                     <div className="content">
                       <h3>FREE ROBOTICS</h3>
                       <p>(Continued)</p>
-                      <div className="venue">Amphi Théâtre</div>
+                      <div className="venue">Amphi II</div>
                     </div>
                   </div>
                   
@@ -411,20 +436,20 @@ const App = () => {
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">4:30 PM - 5:30 PM</div>
+                    <div className="time">4:30 PM - 5:00 PM</div>
                     <div className="content">
-                      <h3>TrilBot (Phase 2)</h3>
-                      <p>Final phase of the TrilBot competition</p>
-                      <div className="venue">Amphi Théâtre</div>
+                      <h3>WarBot (Phase 2)</h3>
+                      <p>Final phase</p>
+                      <div className="venue">Amphi II</div>
                     </div>
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">5:30 PM - 6:30 PM</div>
+                    <div className="time">5:00 PM - 6:30 PM</div>
                     <div className="content">
                       <h3>Awards Ceremony</h3>
                       <p>Closing ceremony and awards distribution</p>
-                      <div className="venue">Amphi Théâtre</div>
+                      <div className="venue">Amphi II</div>
                     </div>
                   </div>
                 </div>
