@@ -220,7 +220,7 @@ const App = () => {
               <img src="\sponso-logos\sud_concession_Auto-LOGO.png" alt="Sponsor 1" />
               </div>
               <div className="sponsor-item">
-                <img src="\sponso-logos\Petrostar-LOGO.png" alt="Sponsor 2" />
+                <img src="\sponso-logos\Petrostar-Logo.png" alt="Sponsor 2" />
               </div>
               <div className="sponsor-item">
                 <img src="\sponso-logos\J&T Robotix.png" alt="Sponsor 3" />
