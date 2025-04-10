@@ -92,7 +92,7 @@ const App = () => {
       {
         id: 'conference3',
         name: 'Mr. JNIOIH Omar',
-        role: 'Founder',
+        role: 'Fondateur',
         company: 'J&T Roboticx',
         photo: '/Media/Omar.jpg',
         title: ' Robotique et innovation: tendances actuelles, des applications pratiques et des perspectives d’avenir.',
