@@ -232,7 +232,7 @@ const App = () => {
             <h2 className="section-title">Sponsors <span className="highlight">& Partners</span></h2>
             <div className="sponsors-grid">
               <div className="sponsor-item">
-              <img src="\sponso-logos\Petrostar-Logo.png" alt="Sponsor 1" />
+              <img src="\sponso-logos\Petrostar-LOGO.png" alt="Sponsor 1" />
               </div>
               <div className="sponsor-item">
                 <img src="\sponso-logos\sud_concession_Auto-LOGO.png" alt="Sponsor 2" />
