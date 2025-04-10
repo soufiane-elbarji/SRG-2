@@ -75,67 +75,82 @@ const App = () => {
     day1: [
       {
         id: 'conference1',
-        name: 'Dr. youness AHALLAL',
+        name: 'Dr. AHALLAL youness',
         role: 'Urologist',
         company: 'Groupe Hospitalier Diaconesses Croix Saint-Simon',
         photo: '/Media/dr-youness_ahallal.jpg',
-        title: 'Surgery Without Borders: The Era of Medical Robotics.',
+        title: 'Chirurgie Sans Frontières : L’Ère de la Robotique Médicale.',
       },
       {
         id: 'conference2',
-        name: 'Speaker Name 2',
+        name: 'Pr. JENKAL Wissem',
         role: 'Founder',
         company: 'J&T Roboticx',
-        photo: '',
-        title: 'Smart Farming: The Future of Agriculture through Robotics.',
+        photo: '/Media/Jenkal-Wissam.jpg',
+        title: 'Vers une ère robotique : enjeux et défis dans un monde en constante évolution.',
       },
       {
         id: 'conference3',
-        name: 'Omar JNIOIH',
+        name: 'Mr. JNIOIH Omar',
         role: 'Founder',
         company: 'J&T Roboticx',
         photo: '/Media/omar.jpg',
-        title: 'The robot humanoid world in Morocco.',
+        title: 'Innover Robotiquement: tendances actuelles, des applications pratiques et des perspectives d’avenir.',
       },
       {
         id: 'conference4',
-        name: 'Speaker Name 2',
-        role: 'Position',
-        company: 'Company',
-        photo: '',
-        title: 'Robotics in Moroccan Industry: Challenges, Opportunities and Future.',
+        name: 'Mr. GUIRROU Hamza',
+        role: 'conseiller d’affaires techniques',
+        company: 'l’Union internationale des transports routiers (IRU) à Genève.',
+        photo: '/Media/Hamza.jpg',
+        title: 'The Road to Safer Driving: ADAS, Autonomy, and Drowsiness Detection Systems.',
+      },
+      {
+        id: 'conference5',
+        name: 'Pr. SADDIK Amine',
+        role: 'Membre du Laboratoire LISTI ENSA et MC à la faculté des sciences Appliquées Ait Melloul',
+        company: '',
+        photo: '/Media/Amine-Saddik.jpg',
+        title: 'La robotique dans l’industrie marocaine : Défis, opportunités et aven',
       }
     ],
     debate: [
       {
         id: 'debater1',
-        name: 'Debater Name 1',
+        name: 'Pr. JENKAL Wissem',
         role: 'Position',
         company: 'Company',
-        photo: '',
+        photo: '/Media/Jenkal-Wissam.jpg',
       },
       {
         id: 'debater2',
-        name: 'Debater Name 2',
+        name: 'Pr. MODAR Mohammed',
         role: 'Position',
         company: 'Company',
         photo: '/speaker-placeholder.jpg',
       },
       {
         id: 'debater3',
-        name: 'Debater Name 3',
+        name: 'Pr. JAMOULI Hicham',
         role: 'Position',
         company: 'Company',
         photo: '/speaker-placeholder.jpg',
       },
       {
         id: 'debater4',
-        name: 'Debater Name 4',
+        name: 'Pr. CHABAA Samira',
         role: 'Position',
         company: 'Company',
         photo: '/speaker-placeholder.jpg',
       }
     ],
+    animator: {
+      id: 'animator1',
+      name: 'Pr. EL OUAFA Idriss',
+      role: 'Event Moderator',
+      company: 'Company Name',
+      photo: '/animator-placeholder.jpg',
+    }
   };
 
   return (
@@ -217,10 +232,10 @@ const App = () => {
             <h2 className="section-title">Sponsors <span className="highlight">& Partners</span></h2>
             <div className="sponsors-grid">
               <div className="sponsor-item">
-              <img src="\sponso-logos\sud_concession_Auto-LOGO.png" alt="Sponsor 1" />
+              <img src="\sponso-logos\Petrostar-Logo.png" alt="Sponsor 1" />
               </div>
               <div className="sponsor-item">
-                <img src="\sponso-logos\Petrostar-Logo.png" alt="Sponsor 2" />
+                <img src="\sponso-logos\sud_concession_Auto-LOGO.png" alt="Sponsor 2" />
               </div>
               <div className="sponsor-item">
                 <img src="\sponso-logos\J&T Robotix.png" alt="Sponsor 3" />
@@ -319,13 +334,13 @@ const App = () => {
                     <div className="time">11:30 AM</div>
                     <div className="content">
                       <h3>Exhibition Booths Opening</h3>
-                      <p>--</p>
+                      <p>Official Tour</p>
                       <div className="venue">Médiathèque</div>
                     </div>
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">12:30 PM - 3:00 PM</div>
+                    <div className="time">12:30 PM - 2:30 PM</div>
                     <div className="content">
                       <h3>Lunch Break</h3>
                       <p>Networking opportunity with refreshments</p>
@@ -334,7 +349,7 @@ const App = () => {
                   </div>
                   
                   <div className="timeline-item">
-                  <div className="time">3:00 PM - 3:45 PM</div>
+                  <div className="time">2:30 PM - 3:10 PM</div>
                   <div className="content">
                     <h3 className="conference-title">Conference 3</h3>
                     <div className="speaker-info">
@@ -353,7 +368,7 @@ const App = () => {
                 </div>
 
                 <div className="timeline-item">
-                  <div className="time">3:45 PM - 4:30 PM</div>
+                  <div className="time">3:10 PM - 3:50 PM</div>
                   <div className="content">
                     <h3 className="conference-title">Conference 4</h3>
                     <div className="speaker-info">
@@ -362,7 +377,26 @@ const App = () => {
                         <div className="speaker-details">
                           <h4>{speakers.day1[3].name}</h4>
                           <p>{speakers.day1[3].role} of {speakers.day1[3].company}</p>
-                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[1].title}</p>
+                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[3].title}</p>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div className="venue">Amphi Théâtre</div>
+                  </div>
+                </div>
+
+                <div className="timeline-item">
+                  <div className="time">3:50 PM - 4:30 PM</div>
+                  <div className="content">
+                    <h3 className="conference-title">Conference 5</h3>
+                    <div className="speaker-info">
+                      <div className="speaker-header">
+                        <img src={speakers.day1[4].photo} alt={speakers.day1[4].name} className="speaker-photo" />
+                        <div className="speaker-details">
+                          <h4>{speakers.day1[4].name}</h4>
+                          <p>{speakers.day1[4].role} of {speakers.day1[4].company}</p>
+                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[4].title}</p>
                         </div>
                       </div>
                       
@@ -381,22 +415,45 @@ const App = () => {
                   </div>
 
                   <div className="timeline-item">
-                    <div className="time">5:00 PM - 6:30 PM</div>
+                    <div className="time">5:00 PM - 6:20 PM</div>
                     <div className="content">
                       <h3>Debate Session</h3>
-                      {/* <p>Panel discussion on current topics in robotics</p> */}
-                      <div className="debate-participants">
-                        {speakers.debate.map(debater => (
-                          <div key={debater.id} className="debate-participant">
-                            <img src={debater.photo} alt={debater.name} className="debate-photo" />
-                            <div className="debate-details">
-                              <h4>{debater.name}</h4>
-                              <p>{debater.role}</p>
-                              <p>{debater.company}</p>
+                      <p>La robotique est-elle la clé du développement durable et économique du Maroc dans les secteurs stratégiques.</p>
+                      
+                      <div className="debate-container">
+                        <div className="debate-participants">
+                          {speakers.debate.map(debater => (
+                            <div key={debater.id} className="debate-participant">
+                              <img src={debater.photo} alt={debater.name} className="debate-photo" />
+                              <div className="debate-details">
+                                <h4>{debater.name}</h4>
+                                <p>{debater.role}</p>
+                                <p>{debater.company}</p>
+                              </div>
                             </div>
+                          ))}
+                        </div>
+                        
+                        <div className="animator-container">
+                          <h4 className='Session-anim'>Session Animator</h4>
+                          <img src={speakers.animator.photo} alt={speakers.animator.name} className="animator-photo" />
+                          <div className="animator-details">
+                            <h4>{speakers.animator.name}</h4>
+                            <p>{speakers.animator.role}</p>
+                            <p>{speakers.animator.company}</p>
                           </div>
-                        ))}
+                        </div>
                       </div>
+                      
+                      <div className="venue">Amphi Théâtre</div>
+                    </div>
+                  </div>
+
+                  <div className="timeline-item">
+                    <div className="time">6:20 PM - 6:30 PM</div>
+                    <div className="content">
+                      <h3>End of day 1</h3>
+                      <p>closing of the first day</p>
                       <div className="venue">Amphi Théâtre</div>
                     </div>
                   </div>
