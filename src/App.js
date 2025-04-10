@@ -61,30 +61,30 @@ const App = () => {
       });
 
       if (response.ok) {
-        alert('Message sent successfully!');
+        alert('Message envoyé avec succès !');
         setFormData({ name: '', email: '', subject: '', message: '' }); // Reset form
       } else {
-        alert('Failed to send message. Please try again.');
+        alert('Échec de l\'envoi du message. Veuillez réessayer.');
       }
     } catch (error) {
-      console.error('Error:', error);
-      alert('An error occurred. Please try again.');
+      console.error('Erreur:', error);
+      alert('Une erreur s\'est produite. Veuillez réessayer.');
     }
   };
   const speakers = {
     day1: [
       {
         id: 'conference1',
-        name: 'Dr. AHALLAL youness',
+        name: 'Dr. AHALLAL Youness',
         role: 'Urologist',
         company: 'Groupe Hospitalier Diaconesses Croix Saint-Simon',
         photo: '/Media/dr-youness_ahallal.jpg',
-        title: 'Chirurgie Sans Frontières : L’Ère de la Robotique Médicale.',
+        title: "Chirurgie Sans Frontières : L'Ère de la Robotique Médicale.",
       },
       {
         id: 'conference2',
         name: 'Pr. JENKAL Wissam',
-        role: 'Founder',
+        role: 'Maître de Conférences Habilité à l’ENSA Agadir Coordonnateur de la filière Mécatronique et Technologies Automobiles Responsable du Laboratoire LiSTi',
         company: 'J&T Roboticx',
         photo: '/Media/Jenkal-Wissam.jpg',
         title: 'Vers une ère robotique : enjeux et défis dans un monde en constante évolution.',
@@ -95,66 +95,60 @@ const App = () => {
         role: 'Fondateur',
         company: 'J&T Roboticx',
         photo: '/Media/Omar.jpg',
-        title: ' Robotique et innovation: tendances actuelles, des applications pratiques et des perspectives d’avenir.',
+        title: "Robotique et innovation: tendances actuelles, des applications pratiques et des perspectives d'avenir.",
       },
       {
         id: 'conference4',
         name: 'Mr. GUIRROU Hamza',
-        role: 'conseiller d’affaires techniques',
-        company: 'l’Union internationale des transports routiers (IRU) à Genève.',
+        role: 'Conseiller d’affaires techniques',
+        company: "Union internationale des transports routiers (IRU) à Genève",
         photo: '/Media/Hamza.jpg',
         title: 'The Road to Safer Driving: ADAS, Autonomy, and Drowsiness Detection Systems.',
       },
       {
         id: 'conference5',
         name: 'Pr. SADDIK Amine',
-        role: 'Membre du Laboratoire LISTI ENSA et MC à la faculté des sciences Appliquées Ait Melloul',
+        role: 'Membre du Laboratoire LISTI ENSA et MC à la faculté des sciences appliquées Ait Melloul',
         company: '',
         photo: '/Media/Amine-Saddik.jpg',
         title: 'Robotics in precision agriculture: has it come of age?',
-      }
+      },
     ],
     debate: [
       {
         id: 'debater1',
         name: 'Pr. JENKAL Wissam',
-        role: 'Position',
-        company: 'Company',
-        photo: '/Media/Jenkal-Wissam.jpg',
-      },
-      {
-        id: 'debater2',
-        name: 'Pr. MODAR Mohammed',
-        role: 'Position',
-        company: 'Company',
-        photo: '/speaker-placeholder.jpg',
-      },
-      {
-        id: 'debater3',
-        name: 'Pr. JAMOULI Hicham',
-        role: 'Directeur de l’ENSA d’Agadir',
+        role: [
+          "Maître de Conférences Habilité à l’ENSA Agadir",
+          "Coordonnateur de la filière Mécatronique et Technologies Automobiles",
+          "Responsable du Laboratoire LiSTi"
+        ].join(' '),
         company: '',
-        photo: '/Media/Hicham.jpg',
+        photo: '/Media/Jenkal-Wissam.jpg',
       },
       {
         id: 'debater4',
         name: 'Pr. CHABAA Samira',
-        role: 'Professeur de génie électrique et d’intelligence artificielle',
+        role: ["Professeur de génie électrique", "Spécialiste en intelligence artificielle"].join(' '),
         company: '',
         photo: '/Media/chabaa.jpeg',
-      }
+      },
     ],
     animator: {
       id: 'animator1',
       name: 'Pr. EL OUAFA Idriss',
-      role: 'Event Moderator',
-      company: 'Company Name',
+      role: [
+        'Event Moderator',
+        'PHD en Sciences du langage de l\'université de Nice Sophia Antipolis',
+        'Professeur habilité en Sciences de l\'Information et de la Communication à l\'université Ibn Zohr d\'Agadir'
+      ].join(' '),
+      company: '',
       photo: '/Media/idriss.jpg',
-    }
+    },
   };
 
   return (
-    <div className="app">
+    <div className="app"> 
     <Analytics />
       {/* Header */}
       <header className="header">
@@ -164,9 +158,9 @@ const App = () => {
           </div>
           <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="#home">Accueil</a></li>
+              <li><a href="#about">À propos</a></li>
+              <li><a href="#schedule">Programme</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </nav>
@@ -185,11 +179,11 @@ const App = () => {
             <h1 className="title">South</h1>
             <h1 className="title"><span className='robotics'>Robotics</span></h1>
             <h1 className="title">Gathering</h1>
-            <h3 className="subtitle">2nd edition</h3>
-            <p className="date">April 11-12, 2025</p>
+            <h3 className="subtitle">2ème édition</h3>
+            <p className="date">11-12 Avril 2025</p>
             <div className="buttons">
-              <a href="#about" className="btn btn-primary">Learn More</a>
-              <a href="#contact" className="btn btn-secondary">Contact Us</a>
+              <a href="#about" className="btn btn-primary">En savoir plus</a>
+              <a href="#contact" className="btn btn-secondary">Nous contacter</a>
             </div>
           </div>
           <div className="hero-image">
@@ -207,15 +201,15 @@ const App = () => {
       <section id="about" className="about">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">About <span className="highlight">SRG</span></h2>
-            <p className="section-subtitle">Learn about our robotics gathering event</p>
+            <h2 className="section-title">À propos du <span className="highlight">SRG</span></h2>
+            <p className="section-subtitle">Découvrez notre événement dédié à la robotique</p>
           </div>
           
           <div className="about-content">
             <div className="about-text">
-              <p>Every year, the South Robotics Gathering (SRG) brings together professionals, researchers, engineers, students, and robotics enthusiasts. Its primary goal is to create a collaborative platform for sharing knowledge and fostering innovation in robotics and technology.</p>
-              <p>SRG serves as an incubator for ideas and a launchpad for young talents, offering them a unique opportunity to showcase their projects and interact with experts from various fields. This event contributes to the advancement of robotics in Morocco and the emergence of a dynamic and innovative tech community.</p>
-              <p>For its second edition, the South Robotics Gathering will be held under the theme "Shaping Morocco's Future: Robotics Across Diverse Sectors." This edition will explore the use of robotics in various key sectors of Morocco.</p>
+              <p>Chaque année, le South Robotics Gathering (SRG) réunit des professionnels, chercheurs, ingénieurs, étudiants et passionnés de robotique. Son objectif principal est de créer une plateforme collaborative pour partager les connaissances et favoriser l'innovation dans le domaine de la robotique et de la technologie.</p>
+              <p>Le SRG sert d'incubateur d'idées et de tremplin pour les jeunes talents, leur offrant une opportunité unique de présenter leurs projets et d'interagir avec des experts de divers domaines. Cet événement contribue à l'avancement de la robotique au Maroc et à l'émergence d'une communauté technologique dynamique et innovante.</p>
+              <p>Pour sa deuxième édition, le South Robotics Gathering se tiendra sous le thème "Shaping Morocco's Future: Robotics Across Diverse Sectors." Cette édition explorera l'utilisation de la robotique dans divers secteurs clés du Maroc.</p>
             </div>
             <div className="about-image">
               <AboutImageGallery />
@@ -223,13 +217,13 @@ const App = () => {
           </div>
           
           <div className="theme-box">
-            <h3>2025's Theme</h3>
+            <h3>Thème 2025</h3>
             <h4>"Shaping Morocco's Future: Robotics Across Diverse Sectors"</h4>
-            <p>Exploring how robotics technology is transforming industries throughout Morocco and building the foundation for a technological future.</p>
+            <p>Exploration de la manière dont la technologie robotique transforme les industries au Maroc et pose les bases d'un avenir technologique.</p>
           </div>
           
           <div className="sponsors">
-            <h2 className="section-title">Sponsors <span className="highlight">& Partners</span></h2>
+            <h2 className="section-title">Sponsors <span className="highlight">& Partenaires</span></h2>
             <div className="sponsors-grid">
               <div className="sponsor-item">
               <img src="\sponso-logos\Petrostar-LOGO.png" alt="Sponsor 1" />
@@ -252,8 +246,8 @@ const App = () => {
       <section id="schedule" className="schedule">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">Event <span className="highlight">Schedule</span></h2>
-            <p className="section-subtitle">Plan your visit</p>
+            <h2 className="section-title">Programme de <span className="highlight">l'événement</span></h2>
+            <p className="section-subtitle">Planifiez votre visite</p>
           </div>
           
           <div className="tabs">
@@ -262,13 +256,13 @@ const App = () => {
                 className={`tab-item ${activeTab === 'day1' ? 'active' : ''}`}
                 onClick={() => handleTabChange('day1')}
               >
-                Day 1 - April 11
+                Jour 1 - 11 Avril
               </div>
               <div
                 className={`tab-item ${activeTab === 'day2' ? 'active' : ''}`}
                 onClick={() => handleTabChange('day2')}
               >
-                Day 2 - April 12
+                Jour 2 - 12 Avril
               </div>
             </div>
             
@@ -277,25 +271,25 @@ const App = () => {
               <div className={`tab-pane ${activeTab === 'day1' ? 'active' : ''}`}>
                 <div className="timeline">
                   <div className="timeline-item">
-                    <div className="time">9:00 AM - 9:30 AM</div>
+                    <div className="time">9:00 - 9:30</div>
                     <div className="content">
-                      <h3>Opening Speech</h3>
-                      <p>Welcome address and introduction to the event theme</p>
+                      <h3>Discours d'ouverture</h3>
+                      <p>Mot de bienvenue et introduction au thème de l'événement</p>
                       <div className="venue">Amphi Théâtre</div>
                     </div>
                   </div>
                   
                   <div className="timeline-item">
-                  <div className="time">9:30 AM - 10:15 AM</div>
+                  <div className="time">9:30 - 10:15</div>
                   <div className="content">
-                    <h3 className="conference-title">Conference 1</h3>
+                    <h3 className="conference-title">Conférence 1</h3>
                     <div className="speaker-info">
                       <div className="speaker-header">
                         <img src={speakers.day1[0].photo} alt={speakers.day1[0].name} className="speaker-photo" />
                         <div className="speaker-details">
                           <h4>{speakers.day1[0].name}</h4>
-                          <p>{speakers.day1[0].role} at {speakers.day1[0].company}</p>
-                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[0].title}</p>
+                          <p>{speakers.day1[0].role} à {speakers.day1[0].company}</p>
+                          <p className="conference-theme"><span className='conf-title'>Titre: </span>{speakers.day1[0].title}</p>
                         </div>
                       </div>
                     </div>
@@ -304,16 +298,16 @@ const App = () => {
                 </div>
 
                 <div className="timeline-item">
-                  <div className="time">10:15 AM - 11:00 AM</div>
+                  <div className="time">10:15 - 11:00</div>
                   <div className="content">
-                    <h3 className="conference-title">Conference 2</h3>
+                    <h3 className="conference-title">Conférence 2</h3>
                     <div className="speaker-info">
                       <div className="speaker-header">
                         <img src={speakers.day1[1].photo} alt={speakers.day1[1].name} className="speaker-photo" />
                         <div className="speaker-details">
                           <h4>{speakers.day1[1].name}</h4>
-                          <p>{speakers.day1[1].role} at {speakers.day1[1].company}</p>
-                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[1].title}</p>
+                          <p>{speakers.day1[1].role} à {speakers.day1[1].company}</p>
+                          <p className="conference-theme"><span className='conf-title'>Titre: </span>{speakers.day1[1].title}</p>
                         </div>
                       </div>
                     </div>
@@ -322,43 +316,43 @@ const App = () => {
                 </div>
                   
                   <div className="timeline-item">
-                    <div className="time">11:00 AM - 11:30 AM</div>
+                    <div className="time">11:00 - 11:30</div>
                     <div className="content">
-                      <h3>Coffee Break</h3>
-                      <p>Networking opportunity with refreshments</p>
+                      <h3>Pause café</h3>
+                      <p>Opportunité de Networking avec rafraîchissements</p>
                       <div className="venue">Espace Amphi</div>
                     </div>
                   </div>
                                     
                   <div className="timeline-item">
-                    <div className="time">11:30 AM</div>
+                    <div className="time">11:30</div>
                     <div className="content">
-                      <h3>Exhibition Booths Opening</h3>
-                      <p>Official Tour</p>
+                      <h3>Ouverture des stands d'exposition</h3>
+                      <p>Tournée officielle</p>
                       <div className="venue">Médiathèque</div>
                     </div>
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">12:30 PM - 2:30 PM</div>
+                    <div className="time">12:30 - 14:30</div>
                     <div className="content">
-                      <h3>Lunch Break</h3>
-                      <p>Networking opportunity with refreshments</p>
+                      <h3>Pause déjeuner</h3>
+                      <p>Opportunité de Networking avec rafraîchissements</p>
                       <div className="venue">Espace Amphi</div>
                     </div>
                   </div>
                   
                   <div className="timeline-item">
-                  <div className="time">2:30 PM - 3:10 PM</div>
+                  <div className="time">14:30 - 15:10</div>
                   <div className="content">
-                    <h3 className="conference-title">Conference 3</h3>
+                    <h3 className="conference-title">Conférence 3</h3>
                     <div className="speaker-info">
                       <div className="speaker-header">
                         <img src={speakers.day1[2].photo} alt={speakers.day1[2].name} className="speaker-photo" />
                         <div className="speaker-details">
                           <h4>{speakers.day1[2].name}</h4>
-                          <p>{speakers.day1[2].role} of {speakers.day1[2].company}</p>
-                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[2].title}</p>
+                          <p>{speakers.day1[2].role} de {speakers.day1[2].company}</p>
+                          <p className="conference-theme"><span className='conf-title'>Titre: </span>{speakers.day1[2].title}</p>
                         </div>
                       </div>
                       
@@ -368,16 +362,16 @@ const App = () => {
                 </div>
 
                 <div className="timeline-item">
-                  <div className="time">3:10 PM - 3:50 PM</div>
+                  <div className="time">15:10 - 15:50</div>
                   <div className="content">
-                    <h3 className="conference-title">Conference 4</h3>
+                    <h3 className="conference-title">Conférence 4</h3>
                     <div className="speaker-info">
                       <div className="speaker-header">
                         <img src={speakers.day1[3].photo} alt={speakers.day1[3].name} className="speaker-photo" />
                         <div className="speaker-details">
                           <h4>{speakers.day1[3].name}</h4>
-                          <p>{speakers.day1[3].role} of {speakers.day1[3].company}</p>
-                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[3].title}</p>
+                          <p>{speakers.day1[3].role} de {speakers.day1[3].company}</p>
+                          <p className="conference-theme"><span className='conf-title'>Titre: </span>{speakers.day1[3].title}</p>
                         </div>
                       </div>
                       
@@ -387,16 +381,16 @@ const App = () => {
                 </div>
 
                 <div className="timeline-item">
-                  <div className="time">3:50 PM - 4:30 PM</div>
+                  <div className="time">15:50 - 16:30</div>
                   <div className="content">
-                    <h3 className="conference-title">Conference 5</h3>
+                    <h3 className="conference-title">Conférence 5</h3>
                     <div className="speaker-info">
                       <div className="speaker-header">
                         <img src={speakers.day1[4].photo} alt={speakers.day1[4].name} className="speaker-photo" />
                         <div className="speaker-details">
                           <h4>{speakers.day1[4].name}</h4>
-                          <p>{speakers.day1[4].role} of {speakers.day1[4].company}</p>
-                          <p className="conference-theme"><span className='conf-title'>Title: </span>{speakers.day1[4].title}</p>
+                          <p>{speakers.day1[4].role} de {speakers.day1[4].company}</p>
+                          <p className="conference-theme"><span className='conf-title'>Titre: </span>{speakers.day1[4].title}</p>
                         </div>
                       </div>
                       
@@ -406,44 +400,79 @@ const App = () => {
                 </div>
 
                 <div className="timeline-item">
-                    <div className="time">4:30 PM - 5:00 PM</div>
+                    <div className="time">16:30 - 17:00</div>
                     <div className="content">
-                      <h3>Coffee Break</h3>
-                      <p>Networking opportunity with refreshments</p>
+                      <h3>Pause café</h3>
+                      <p>Opportunité de Networking avec rafraîchissements</p>
                       <div className="venue">Espace Amphi</div>
                     </div>
                   </div>
 
                   <div className="timeline-item">
-                    <div className="time">5:00 PM - 6:20 PM</div>
+                    <div className="time">17:00 - 18:20</div>
                     <div className="content">
-                      <h3>Debate Session</h3>
-                      <p>La robotique est-elle la clé du développement durable et économique du Maroc dans les secteurs stratégiques.</p>
-
-                      <div className="animator-container">
-                          <h4 className='Session-anim'>Session Moderator</h4>
-                          <img src={speakers.animator.photo} alt={speakers.animator.name} className="animator-photo" />
-                          <div className="animator-details">
-                            <h4>{speakers.animator.name}</h4>
-                            <p>{speakers.animator.role}</p>
-                            <p>{speakers.animator.company}</p>
+                      <div className="debate-container">
+                        <div className="debate-header">
+                          <h3 className="debate-title">Session de Débat</h3>
+                          <p className="debate-topic">
+                            "La robotique est-elle la clé du développement durable et économique du Maroc 
+                            dans les secteurs stratégiques ?"
+                          </p>
+                        </div>
+                        
+                        <div className="debate-participants-row">
+                          {/* Moderator */}
+                          <div className="debate-participant moderator">
+                            <div className="debate-photo-container">
+                              <img 
+                                src={speakers.animator.photo} 
+                                alt={speakers.animator.name} 
+                                className="debate-photo" 
+                              />
+                            </div>
+                            <h4 className="participant-name">{speakers.animator.name}</h4>
+                            <p className="participant-role">Modérateur de Session</p>
+                            <p className="participant-bio">
+                              {speakers.animator.role.split(',')[0]}
+                            </p>
+                          </div>
+                          
+                          {/* Debater 1 */}
+                          <div className="debate-participant">
+                            <div className="debate-photo-container">
+                              <img 
+                                src={speakers.debate[0].photo} 
+                                alt={speakers.debate[0].name} 
+                                className="debate-photo" 
+                              />
+                            </div>
+                            <h4 className="participant-name">{speakers.debate[0].name}</h4>
+                            <p className="participant-role">
+                              {speakers.debate[0].role.split('.').slice(0, 2).join('.')}
+                            </p>
+                            <p className="participant-bio">
+                              {speakers.debate[0].role.split('.').slice(2).join('.')}
+                            </p>
+                          </div>
+                          
+                          {/* Debater 2 */}
+                          <div className="debate-participant">
+                            <div className="debate-photo-container">
+                              <img 
+                                src={speakers.debate[1].photo} 
+                                alt={speakers.debate[1].name} 
+                                className="debate-photo" 
+                              />
+                            </div>
+                            <h4 className="participant-name">{speakers.debate[1].name}</h4>
+                            <p className="participant-role">
+                              {speakers.debate[1].role.split('.')[0]}
+                            </p>
+                            <p className="participant-bio">
+                              {speakers.debate[1].role.split('.').slice(1).join('.')}
+                            </p>
                           </div>
                         </div>
-                      
-                      <div className="debate-container">
-                        <div className="debate-participants">
-                          {speakers.debate.map(debater => (
-                            <div key={debater.id} className="debate-participant">
-                              <img src={debater.photo} alt={debater.name} className="debate-photo" />
-                              <div className="debate-details">
-                                <h4>{debater.name}</h4>
-                                <p>{debater.role}</p>
-                                <p>{debater.company}</p>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-
                       </div>
                       
                       <div className="venue">Amphi Théâtre</div>
@@ -451,10 +480,10 @@ const App = () => {
                   </div>
 
                   <div className="timeline-item">
-                    <div className="time">6:20 PM - 6:30 PM</div>
+                    <div className="time">18:20 - 18:30</div>
                     <div className="content">
-                      <h3>End of day 1</h3>
-                      <p>closing of the first day</p>
+                      <h3>Fin du premier jour</h3>
+                      <p>Clôture de la première journée</p>
                       <div className="venue">Amphi Théâtre</div>
                     </div>
                   </div>
@@ -466,15 +495,15 @@ const App = () => {
               <div className={`tab-pane ${activeTab === 'day2' ? 'active' : ''}`}>
                 <div className="timeline">
                 <div className="timeline-item">
-                    <div className="time">8:30 AM</div>
+                    <div className="time">8:30</div>
                     <div className="content">
-                      <h3>Reception</h3>
-                      <p>Reception of participants</p>
+                      <h3>Accueil</h3>
+                      <p>Accueil des participants</p>
                       <div className="venue">Amphi II</div>
                     </div>
                   </div>
                   <div className="timeline-item">
-                    <div className="time">9:00 AM - 10:15 AM</div>
+                    <div className="time">9:00 - 10:15</div>
                     <div className="content">
                       <h3>WarBot (Phase 1)</h3>
                       <p>Phase éliminatoire et demi finale</p>
@@ -483,64 +512,64 @@ const App = () => {
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">10:15AM - 10:45 AM</div>
+                    <div className="time">10:15 - 10:45</div>
                     <div className="content">
-                      <h3>Coffee Break</h3>
-                      <p>Networking opportunity with refreshments</p>
+                      <h3>Pause café</h3>
+                      <p>Opportunité de Networking avec rafraîchissements</p>
                       <div className="venue">Espace Amphi</div>
                     </div>
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">10:45 AM - 1:00 PM</div>
+                    <div className="time">10:45 - 13:00</div>
                     <div className="content">
                       <h3>FREE ROBOTICS</h3>
-                      <p>Open robotics demonstrations and exhibitions</p>
+                      <p>Démonstrations et expositions libres de robotique</p>
                       <div className="venue">Amphi II</div>
                     </div>
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">1:00 PM - 2:30 PM</div>
+                    <div className="time">13:00 - 14:30</div>
                     <div className="content">
-                      <h3>Lunch Break</h3>
-                      <p>Networking opportunity with refreshments</p>
+                      <h3>Pause déjeuner</h3>
+                      <p>Opportunité de networking</p>
                       <div className="venue">Espace Amphi</div>
                     </div>
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">2:30 PM - 4:00 PM</div>
+                    <div className="time">14:30 - 16:00</div>
                     <div className="content">
                       <h3>FREE ROBOTICS</h3>
-                      <p>(Continued)</p>
+                      <p>(Suite)</p>
                       <div className="venue">Amphi II</div>
                     </div>
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">4:00 PM - 4:30 PM</div>
+                    <div className="time">16:00 - 16:30</div>
                     <div className="content">
-                      <h3>Coffee Break</h3>
-                      <p>Networking opportunity with refreshments</p>
+                      <h3>Pause café</h3>
+                      <p>Opportunité de networking</p>
                       <div className="venue">Espace Amphi</div>
                     </div>
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">4:30 PM - 5:00 PM</div>
+                    <div className="time">16:30 - 17:00</div>
                     <div className="content">
                       <h3>WarBot (Phase 2)</h3>
-                      <p>Final phase</p>
+                      <p>Phase finale</p>
                       <div className="venue">Amphi II</div>
                     </div>
                   </div>
                   
                   <div className="timeline-item">
-                    <div className="time">5:00 PM - 6:30 PM</div>
+                    <div className="time">17:00 - 18:30</div>
                     <div className="content">
-                      <h3>Awards Ceremony</h3>
-                      <p>Closing ceremony and awards distribution</p>
+                      <h3>Cérémonie de remise des prix</h3>
+                      <p>Cérémonie de clôture et distribution des prix</p>
                       <div className="venue">Amphi II</div>
                     </div>
                   </div>
@@ -555,8 +584,8 @@ const App = () => {
       <section id="contact" className="contact">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">Contact <span className="highlight">Us</span></h2>
-            <p className="section-subtitle">Get in touch with our team</p>
+            <h2 className="section-title">Nous <span className="highlight">contacter</span></h2>
+            <p className="section-subtitle">Prenez contact avec notre équipe</p>
           </div>
           
           <div className="contact-container">
@@ -567,13 +596,13 @@ const App = () => {
               </div>
               
               <div className="info-item">
-                <h3>Phone</h3>
+                <h3>Téléphone</h3>
                 <p>+212 608-599022</p>
               </div>
               
               <div className="info-item">
-                <h3>Address</h3>
-                <p>ENSA Agadir</p>
+                <h3>Adresse</h3>
+                <p>ENSA Agadir</p>  
               </div>
               
               <div className="social-links">
@@ -595,7 +624,7 @@ const App = () => {
                   <input
                     type="text"
                     name="name"
-                    placeholder="Your Name"
+                    placeholder="Votre nom"
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -605,7 +634,7 @@ const App = () => {
                   <input
                     type="email"
                     name="email"
-                    placeholder="Your Email"
+                    placeholder="Votre email"
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -615,7 +644,7 @@ const App = () => {
                   <input
                     type="text"
                     name="subject"
-                    placeholder="Subject"
+                    placeholder="Sujet"
                     value={formData.subject}
                     onChange={handleChange}
                     required
@@ -624,14 +653,14 @@ const App = () => {
                 <div className="form-group">
                   <textarea
                     name="message"
-                    placeholder="Your Message"
+                    placeholder="Votre message"
                     rows="5"
                     value={formData.message}
                     onChange={handleChange}
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary">Send Message</button>
+                <button type="submit" className="btn btn-primary">Envoyer le message</button>
               </form>
             </div>
           </div>
@@ -647,7 +676,7 @@ const App = () => {
               <p>Shaping Morocco's Future: Robotics Across Diverse Sectors</p>
             </div>
             <p className="copyright">
-              Developed by <a href="https://www.linkedin.com/in/soufiane-elbarji/" target="_blank" rel="noopener noreferrer">Soufiane El Barji</a>
+              Développé par <a href="https://www.linkedin.com/in/soufiane-elbarji/" target="_blank" rel="noopener noreferrer">Soufiane El Barji</a>
             </p>
           </div>
         </div>

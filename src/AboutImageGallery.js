@@ -10,24 +10,24 @@ const AboutImageGallery = () => {
       src: "/Media/Ensa.jpg",
       alt: "Ensa Agadir",
       caption: "ENSA Agadir"
-    },
+    },                  
     {
       id: 2,
       src: "/Media/Exhibit.jpg",
-      alt: "Innovation Showcase",
-      caption: "Innovative projects display"
+      alt: "Vitrine de l'innovation",
+      caption: "Présentation des projets des participants"
     },
     {
       id: 3,
       src: "/Media/Sumo.jpg",
-      alt: "Competition",
-      caption: "Sumo Robot Competition"
+      alt: "Compétition",
+      caption: "Compétition de robots Sumo"
     },
     {
       id: 4,
       src: "/Media/Awards.jpg",
-      alt: "Award Ceremony",
-      caption: "Award Ceremony"
+      alt: "Cérémonie de remise des prix",
+      caption: "Cérémonie de remise des prix"
     }
   ];
 
