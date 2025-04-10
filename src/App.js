@@ -83,7 +83,7 @@ const App = () => {
       },
       {
         id: 'conference2',
-        name: 'Pr. JENKAL Wissem',
+        name: 'Pr. JENKAL Wissam',
         role: 'Founder',
         company: 'J&T Roboticx',
         photo: '/Media/Jenkal-Wissam.jpg',
@@ -95,7 +95,7 @@ const App = () => {
         role: 'Founder',
         company: 'J&T Roboticx',
         photo: '/Media/Omar.jpg',
-        title: 'Innover Robotiquement: tendances actuelles, des applications pratiques et des perspectives d’avenir.',
+        title: ' Robotique et innovation: tendances actuelles, des applications pratiques et des perspectives d’avenir.',
       },
       {
         id: 'conference4',
@@ -111,13 +111,13 @@ const App = () => {
         role: 'Membre du Laboratoire LISTI ENSA et MC à la faculté des sciences Appliquées Ait Melloul',
         company: '',
         photo: '/Media/Amine-Saddik.jpg',
-        title: 'La robotique dans l’industrie marocaine : Défis, opportunités et aven',
+        title: 'Robotics in precision agriculture: has it come of age?',
       }
     ],
     debate: [
       {
         id: 'debater1',
-        name: 'Pr. JENKAL Wissem',
+        name: 'Pr. JENKAL Wissam',
         role: 'Position',
         company: 'Company',
         photo: '/Media/Jenkal-Wissam.jpg',
@@ -132,16 +132,16 @@ const App = () => {
       {
         id: 'debater3',
         name: 'Pr. JAMOULI Hicham',
-        role: 'Position',
-        company: 'Company',
-        photo: '/speaker-placeholder.jpg',
+        role: 'Directeur de l’ENSA d’Agadir',
+        company: '',
+        photo: '/Media/Hicham.jpg',
       },
       {
         id: 'debater4',
         name: 'Pr. CHABAA Samira',
-        role: 'Position',
-        company: 'Company',
-        photo: '/speaker-placeholder.jpg',
+        role: 'Professeur de génie électrique et d’intelligence artificielle',
+        company: '',
+        photo: '/Media/chabaa.jpeg',
       }
     ],
     animator: {
@@ -419,6 +419,16 @@ const App = () => {
                     <div className="content">
                       <h3>Debate Session</h3>
                       <p>La robotique est-elle la clé du développement durable et économique du Maroc dans les secteurs stratégiques.</p>
+
+                      <div className="animator-container">
+                          <h4 className='Session-anim'>Session Moderator</h4>
+                          <img src={speakers.animator.photo} alt={speakers.animator.name} className="animator-photo" />
+                          <div className="animator-details">
+                            <h4>{speakers.animator.name}</h4>
+                            <p>{speakers.animator.role}</p>
+                            <p>{speakers.animator.company}</p>
+                          </div>
+                        </div>
                       
                       <div className="debate-container">
                         <div className="debate-participants">
@@ -433,16 +443,7 @@ const App = () => {
                             </div>
                           ))}
                         </div>
-                        
-                        <div className="animator-container">
-                          <h4 className='Session-anim'>Session Animator</h4>
-                          <img src={speakers.animator.photo} alt={speakers.animator.name} className="animator-photo" />
-                          <div className="animator-details">
-                            <h4>{speakers.animator.name}</h4>
-                            <p>{speakers.animator.role}</p>
-                            <p>{speakers.animator.company}</p>
-                          </div>
-                        </div>
+
                       </div>
                       
                       <div className="venue">Amphi Théâtre</div>
