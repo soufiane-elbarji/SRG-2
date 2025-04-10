@@ -468,7 +468,7 @@ const App = () => {
                     <div className="time">8:30 AM</div>
                     <div className="content">
                       <h3>Reception</h3>
-                      <p>--</p>
+                      <p>Reception of participants</p>
                       <div className="venue">Amphi II</div>
                     </div>
                   </div>
