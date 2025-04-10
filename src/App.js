@@ -94,7 +94,7 @@ const App = () => {
         name: 'Mr. JNIOIH Omar',
         role: 'Founder',
         company: 'J&T Roboticx',
-        photo: '/Media/omar.jpg',
+        photo: '/Media/Omar.jpg',
         title: 'Innover Robotiquement: tendances actuelles, des applications pratiques et des perspectives d’avenir.',
       },
       {
