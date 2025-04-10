@@ -149,7 +149,7 @@ const App = () => {
       name: 'Pr. EL OUAFA Idriss',
       role: 'Event Moderator',
       company: 'Company Name',
-      photo: '/animator-placeholder.jpg',
+      photo: '/Media/idriss.jpg',
     }
   };
 
