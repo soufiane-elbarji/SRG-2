@@ -273,7 +273,7 @@ const App = () => {
                   <div className="timeline-item">
                     <div className="time">9:00 - 9:30</div>
                     <div className="content">
-                      <h3>Discours d'ouverture</h3>
+                      <h3>Mots d'ouverture</h3>
                       <p>Mot de bienvenue et introduction au thème de l'événement</p>
                       <div className="venue">Amphi Théâtre</div>
                     </div>
